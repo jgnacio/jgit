@@ -21,7 +21,7 @@ if [[ -z $user_email ]];then
 response="y"
 read -e -p 'your sure to update this files?[Y/n]"\n"' $response
 
-if [[ $response = "n" ]]
+if [[ $response -eq "n" ]];then
 	set -e
 	
 git status
