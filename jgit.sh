@@ -18,11 +18,5 @@ if [[ -z $user_email ]];then
 	read -e -p "Your email of github for config" $user_email
 	git config user.email "$user_email"
 
-response="y"
-read -e -p 'your sure to update this files?[Y/n]"\n"' $response
-
-if [[ $response -eq "n" ]];then
-	set -e
-	
 git status
 git push
