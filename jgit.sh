@@ -31,3 +31,4 @@ fi
 git status
 git push
 
+echo funciona
