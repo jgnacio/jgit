@@ -1,9 +1,12 @@
 #!/bin/bash
+
 echo -e "jgit by (jgnacio)\ncheck the repo..."
 git fetch
 git pull
 
 echo '==== Git status ===='
+echo 'Files Modified: '
+files_deleted= git status -s | grep 'M' | awk '{print $2}' | paste -s
 echo 'Files deleted: '
 files_deleted= git status -s | grep 'D' | awk '{print $2}' | paste -s
 echo 'Files added: '
