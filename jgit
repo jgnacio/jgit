@@ -19,11 +19,11 @@ if [[ $? -eq 2 ]];then
 	git config user.email "$user_email"
 fi
 
-
+echo 'files deleted: '
 files_deleted= git status -s | grep 'D' | awk '{print $2}' | paste -s
-
+echo 'files added: '
 files_added= git status -s | grep 'A' | awk '{print $2}' | paste -s
-
+echo 'files unknown: '
 files_u= git status -s | grep '??' | awk '{print $2}' | paste -s
 
 
