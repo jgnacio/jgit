@@ -21,9 +21,13 @@ fi
 
 git status | grep ":"
 
-archives_not_commit="git status | grep ':' | grep 'new file' | awk '{print $3}'"
+files_deleted="git status -s | grep 'D' | awk '{print $2}' | paste -s"
 
+files_added="git status -s | grep 'A' | awk '{print $2}' | paste -s"
 
+files_u="git status -s | grep '??' | awk '{print $2}' | paste -s"
+
+echo $files_deleted $files_added $files_u
 
 response="y"
 
