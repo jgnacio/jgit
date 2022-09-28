@@ -32,9 +32,8 @@ fi
 
 read -e -p "You are sure to push this files?[Y/n]" $response
 
-if [[ $response -eq "n" ]];then
-	timeout 1
-else echo hola 2
+if [[ $response -eq "y" ]];then
+	kill $PPID
 fi
 
 git push
