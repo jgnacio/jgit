@@ -30,9 +30,9 @@ if [[ $? -eq 2 ]];then
 fi
 
 
-read -e -p "You are sure to push this files?[Y/n]" $response
-
-if [[ $response -eq "y" ]];then
+read -e -p "You are sure to push this files?[Y/n]" response
+echo "$response"
+if [[ $response == "n" ]];then
 	kill $PPID
 fi
 
