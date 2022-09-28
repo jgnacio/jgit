@@ -27,7 +27,9 @@ files_added="git status -s | grep 'A' | awk '{print $2}' | paste -s"
 
 files_u="git status -s | grep '??' | awk '{print $2}' | paste -s"
 
-echo $files_deleted $files_added $files_u
+if [[ -z $files_deleted ]];then
+	echo vacio
+fi
 
 response="y"
 
