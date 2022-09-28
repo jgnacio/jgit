@@ -28,7 +28,7 @@ fi
 
 
 read -e -p "You are sure to push this files?[Y/n]" response
-if [[ $response != "y" ]];then
+if [[ $response != "y" && $response != "" ]];then
 	echo exit
 	kill $PPID
 else
