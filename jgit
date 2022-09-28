@@ -33,7 +33,8 @@ fi
 read -e -p "You are sure to push this files?[Y/n]" response
 echo "$response"
 if [[ $response != "y" ]];then
-	kill $PPID
+	echo es correcto
+else kill $PPID
 fi
 
 git push
