@@ -8,8 +8,8 @@ git commit -m "$message"
 
 
 
-user_name="git config user.name" > /dev/null 2>&1
-user_email="git config user.email" > /dev/null 2>&1
+user_name=git config user.name > /dev/null 2>&1
+user_email=git config user.email > /dev/null 2>&1
 
 if [[ $? -eq 2 ]];then
 	echo 'User name or email is not set'
@@ -21,11 +21,11 @@ fi
 
 git status | grep ":"
 
-files_deleted="git status -s | grep 'D' | awk '{print $2}' | paste -s"
+files_deleted=git status -s | grep 'D' | awk '{print $2}' | paste -s
 
-files_added="git status -s | grep 'A' | awk '{print $2}' | paste -s"
+files_added=git status -s | grep 'A' | awk '{print $2}' | paste -s
 
-files_u="git status -s | grep '??' | awk '{print $2}' | paste -s"
+files_u= git status -s | grep '??' | awk '{print $2}' | paste -s
 
 if [[ -z $files_deleted ]];then
 	echo vacio
