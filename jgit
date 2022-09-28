@@ -27,7 +27,7 @@ archives_not_commit="git status | grep ':' | grep 'new file' | awk '{print $3}'"
 
 response="y"
 
-read -e -p "You are sure to push this files?[Y/n]: " $response
+read -e -p "You are sure to push this files?[Y/n]" $response
 
 if [[ $response -eq "n" ]];then
 	set -e
