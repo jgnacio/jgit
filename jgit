@@ -1,10 +1,20 @@
-#/bin/bash
+#!/bin/bash
 git fetch
 git pull
+
+echo 'Write the name of the fules to send (defaul:all)'
 read -e -p "files to send: " archives_to_push
 git add $archives_to_push
 read -e -p "message fot this commit: " message
 git commit -m "$message"
+
+echo 'files deleted: '
+files_deleted= git status -s | grep 'D' | awk '{print $2}' | paste -s
+echo 'files added: '
+files_added= git status -s | grep 'A' | awk '{print $2}' | paste -s
+echo 'files unknown: '
+files_u= git status -s | grep '??' | awk '{print $2}' | paste -s
+
 
 
 
@@ -19,21 +29,12 @@ if [[ $? -eq 2 ]];then
 	git config user.email "$user_email"
 fi
 
-echo 'files deleted: '
-files_deleted= git status -s | grep 'D' | awk '{print $2}' | paste -s
-echo 'files added: '
-files_added= git status -s | grep 'A' | awk '{print $2}' | paste -s
-echo 'files unknown: '
-files_u= git status -s | grep '??' | awk '{print $2}' | paste -s
-
-
-
 response="y"
 
 read -e -p "You are sure to push this files?[Y/n]" $response
 
 if [[ $response -eq "n" ]];then
-	set -e
+	break
 fi
 
 git push
