@@ -12,17 +12,18 @@ user_name="git config user.name" > /dev/null 2>&1
 user_email="git config user.email" > /dev/null 2>&1
 
 if [[ $? -eq 2 ]];then
-	echo 'user.name is not set'
-	read -e -p "Your user name of github for config" $user_name
+	echo 'User name or email is not set'
+	read -e -p "Please write your user name of github for config: " $user_name
+	read -e -p "Please write your user email of github for config: " $user_email
 	git config user.name "$user_name"
-fi
-if [[ -z $user_email ]];then
-	echo 'user.email is not set'
-	read -e -p "Your email of github for config" $user_email
 	git config user.email "$user_email"
 fi
 
-git status
+git status | grep ":"
+
+archives_not_commit="git status | grep ':' | grep 'new file' | awk '{print $3}'"
+
+
 
 response="y"
 
