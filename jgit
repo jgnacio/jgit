@@ -6,8 +6,8 @@ git add $archives_to_push
 read -e -p "message fot this commit: " message
 git commit -m "$message"
 
-user_name="git config user.name" 2&> /dev/null
-user_email="git config user.email"
+user_name="git config user.name" > /dev/null 2>&1
+user_email="git config user.email" > /dev/null 2>&1
 
 if [[ $? -eq 2 ]];then
 	echo 'user.name is not set'
@@ -31,5 +31,3 @@ if [[ $response -eq "n" ]];then
 fi
 
 git push
-
-echo funciona
