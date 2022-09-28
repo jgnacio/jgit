@@ -29,12 +29,12 @@ if [[ $? -eq 2 ]];then
 	git config user.email "$user_email"
 fi
 
-response="y"
 
 read -e -p "You are sure to push this files?[Y/n]" $response
 
 if [[ $response -eq "n" ]];then
-	break
+	echo hola
+else echo hola 2
 fi
 
 git push
