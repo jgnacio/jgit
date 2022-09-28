@@ -33,7 +33,7 @@ fi
 read -e -p "You are sure to push this files?[Y/n]" $response
 
 if [[ $response -eq "n" ]];then
-	echo hola
+	timeout 1
 else echo hola 2
 fi
 
