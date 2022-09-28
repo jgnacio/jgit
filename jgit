@@ -8,13 +8,16 @@ git add $archives_to_push
 read -e -p "message fot this commit: " message
 git commit -m "$message"
 
+echo ''
 echo 'Files deleted: '
 files_deleted= git status -s | grep 'D' | awk '{print $2}' | paste -s
 echo 'Files added: '
 files_added= git status -s | grep 'A' | awk '{print $2}' | paste -s
 echo 'Files unknown: '
 files_u= git status -s | grep '??' | awk '{print $2}' | paste -s
+echo ''
 
+#config for the user
 user_name= git config user.name > /dev/null 2>&1
 user_email= git config user.email > /dev/null 2>&1
 
