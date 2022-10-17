@@ -4,15 +4,15 @@ echo -e "jgit by (jgnacio)\ncheck the repo..."
 git fetch
 git pull
 
-echo '==== Git status ===='
-echo 'Files Modified: '
-files_deleted= git status -s | grep 'M' | awk '{print $2}' | paste -s
-echo 'Files deleted: '
-files_deleted= git status -s | grep 'D' | awk '{print $2}' | paste -s
-echo 'Files added: '
-files_added= git status -s | grep 'A' | awk '{print $2}' | paste -s
-echo 'Files unknown: '
-files_u= git status -s | grep '??' | awk '{print $2}' | paste -s
+#echo '==== Git status ===='
+#echo 'Files Modified: '
+#files_deleted= git status -s | grep 'M' | awk '{print $2}' | paste -s
+#echo 'Files deleted: '
+#files_deleted= git status -s | grep 'D' | awk '{print $2}' | paste -s
+#echo 'Files added: '
+#files_added= git status -s | grep 'A' | awk '{print $2}' | paste -s
+#echo 'Files unknown: '
+#files_u= git status -s | grep '??' | awk '{print $2}' | paste -s
 echo '===================='
 
 #echo 'Write the name of the fules to send (defaul:all)'
