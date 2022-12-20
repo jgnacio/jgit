@@ -14,4 +14,4 @@ sudo cp jgit /usr/bin
 and that's it, you now have jgit installed on your system!
 
 # Usage
-just type ``jgit`` on terminal and run it ;)just type jgit
+just type ``jgit`` on terminal and run it ;)
