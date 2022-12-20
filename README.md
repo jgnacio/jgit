@@ -26,7 +26,7 @@ open your .bashrc (it is usually in ~/.bashrc) and delete this line
 ```bash
 alias jgit='<your-path-for-jgit>/jgit
 ```
-the -f parameter in rm is for force deletion.
+
 ### (zsh) example:
 is identical to bash only modifying the .zshrc file. (it is usually in ~/.zshrc)
 and delete this line
