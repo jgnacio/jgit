@@ -6,6 +6,9 @@ In a linux terminal type:
 ```bash
 git clone https://github.com/jgnacio/jgit.git
 cd jgit
+```
+Then run the installer
+```bash
 ./install.sh
 ```
 ``git clone https://github.com/jgnacio/jgit.git`` for clone the repo in your current directory.
