@@ -17,9 +17,7 @@ echo '===================='
 
 #echo 'Write the name of the fules to send (defaul:all)'
 read -e -p "files to send: " archives_to_push
-git add $archives_to_push
 read -e -p "message fot this commit: " message
-git commit -m "$message"
 
 #config for the user
 user_name= git config user.name > /dev/null 2>&1
@@ -39,5 +37,7 @@ if [[ $response != "y" && $response != "" ]];then
 	echo exit
 	kill $PPID
 else
+git add $archives_to_push
+git commit -m "$message"
 git push
 fi
