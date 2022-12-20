@@ -14,4 +14,11 @@ sudo cp jgit /usr/bin
 and that's it, you now have jgit installed on your system!
 
 # Usage
-just type ``jgit`` on terminal and run it ;)
+Just type ``jgit`` on terminal and run it ;)
+
+# How remove :,(
+You just have to remove the executable from /usr/bin
+```bash
+sudo rm -f /usr/bin/jgit
+```
+the -f parameter in rm is for force deletion.
