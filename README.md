@@ -21,8 +21,8 @@ And that's it, you now have jgit installed on your system!
 # Usage
 Just type ``jgit`` on terminal and run it ;)
 
-# How remove :,(
-You just have to remove the repositorie from your system with ``rm`` and
+# Uninstall :,(
+You just have to remove the repositorie from your system and
 delete the alias from your shell configuration.
 ### (bash) example:
 open your .bashrc (it is usually in ~/.bashrc) and delete this line
